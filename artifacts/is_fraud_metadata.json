@@ -1,0 +1,38 @@
+{
+  "model_type": "GradientBoostingClassifier (tuned)",
+  "target": "is_fraud",
+  "features_numeric": [
+    "order_total",
+    "shipping_fee",
+    "tax_amount",
+    "risk_score",
+    "customer_age_years",
+    "order_hour",
+    "order_dow",
+    "order_month",
+    "item_count",
+    "avg_unit_price",
+    "zip_mismatch",
+    "promo_used"
+  ],
+  "features_categorical": [
+    "payment_method",
+    "device_type",
+    "ip_country",
+    "customer_segment",
+    "loyalty_tier",
+    "gender"
+  ],
+  "best_params": {
+    "classifier__subsample": "0.8",
+    "classifier__n_estimators": "100",
+    "classifier__min_samples_split": "5",
+    "classifier__max_depth": "3",
+    "classifier__learning_rate": "0.05"
+  },
+  "test_roc_auc": 0.7445746527777778,
+  "train_samples": 4000,
+  "test_samples": 1000,
+  "fraud_rate": 0.0636,
+  "trained_at": "2026-03-31T18:13:43.422001"
+}
